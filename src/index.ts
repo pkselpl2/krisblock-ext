@@ -1,8 +1,10 @@
 import * as strongblock from './blocks/block_strongblock'
+import * as expressblock from './blocks/block_expressblock'
 import type { EntryBlockModule } from './types'
 
-const categories = [
+const categories: EntryBlockModule[] = [
   strongblock,
+  expressblock,
 ]
 
 function addCategory(moduleObject: EntryBlockModule) {
@@ -10,15 +12,7 @@ function addCategory(moduleObject: EntryBlockModule) {
   if (blocks.some(({ category }) => moduleObject.name == category)) return
 
   const upperName = moduleObject.name.toUpperCase()
-  Lang.Blocks[upperName] = moduleObject.title[Lang.type] || moduleObject.title[Lang.fallbackType]
-
-  const { colorSet } = moduleObject
-  if (colorSet) {
-    EntryStatic.colorSet.block.default[upperName] = colorSet.default
-    EntryStatic.colorSet.block.darken[upperName] = colorSet.darken
-    EntryStatic.colorSet.block.lighten[upperName] = colorSet.lighten
-    EntryStatic.colorSet.block.emphasize[colorSet.default] = colorSet.emphasize
-  }
+  Lang.Blocks[upperName] = moduleObject.title[Lang.type] || moduleObject.title[Lang.fallbackType]!
 
   EntryStatic.getAllBlocks = (getAllBlocks => () => [
     ...getAllBlocks(),

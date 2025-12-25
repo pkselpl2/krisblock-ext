@@ -1,0 +1,14 @@
+#entryCategoryStrongBlock {
+  background-image: url(https://raw.githack.com/simonj-entry/StrongBlock/main/strongbig.svg);
+  background-repeat: no-repeat;
+  margin-bottom: 1px;
+  background-position-y: 10px;
+  background-size: 20px;
+}
+
+.entrySelectedCategory#entryCategoryStrongBlock {
+  background-image: url(https://raw.githack.com/simonj-entry/StrongBlock/main/Strong.svg);
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}

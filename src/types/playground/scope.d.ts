@@ -21,7 +21,7 @@ export class Scope {
   _setBlockState(this: Scope, fieldBlock: unknown, valueState: unknown): void
   _setChildBlockState(this: Scope, fieldBlocks: unknown, currentBlockId: unknown): void
 
-  getValue(this: Scope, key: string, scope?: Scope): any
+  getValue(this: Scope, key: string, scope?: Scope): unknown
   getValues<const T extends string[]>(this: Scope, keys: T, scope?: Scope): {
     [K in keyof T]: unknown
   }

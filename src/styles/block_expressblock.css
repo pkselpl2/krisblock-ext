@@ -1,0 +1,14 @@
+#entryCategoryExpressBlock {
+  background-image: url(https://raw.githack.com/entry62045/entryjs/main/images/icon.svg);
+  background-repeat: no-repeat;
+  margin-bottom: 1px;
+  background-position-y: 10px;
+  background-size: 20px;
+}
+
+.entrySelectedCategory#entryCategoryExpressBlock {
+  background-image: url(https://raw.githack.com/entry62045/entryjs/main/images/icon_selected.svg);
+  background-color: #FA6F23;
+  border-color: #FA6F23;
+  color: #fff;
+}
