@@ -1,4 +1,4 @@
-import * as strongblock from './blocks/block_strongblock'
+import * as krisblock from './blocks/block_strongblock'
 import * as expressblock from './blocks/block_expressblock'
 import type { EntryBlockModule } from './types'
 
